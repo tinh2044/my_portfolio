@@ -1,0 +1,230 @@
+/************ Custom Font ************/
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
+
+/************ Default Css ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+    user-select: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-weight: 400;
+    overflow-x: hidden;
+    position: relative;
+    /* background-color: #121212 !important; */
+    color: #fff !important;
+    font-family: 'Centra', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+p.success {
+    color: green;
+}
+
+p.danger {
+    color: red;
+}
+
+.App {
+    overflow: hidden;
+}
+
+/************ Footer Css ************/
+.footer {
+    padding: 0 0 50px 0;
+    background-image: url('./assets/img/footer-bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer img {
+    width: 26%;
+}
+
+.footer p {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b8b8b8;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b8b8b8;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+@media (min-width: 1700px) {
+    main .container {
+        max-width: 100%;
+        padding: 0 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #navbar {
+        .navbar-collapse {
+            background-color: #121212;
+
+        }
+
+        .navbar-brand {
+            width: 20%;
+        }
+
+        .nav-link {
+            padding: 12px 24px;
+        }
+
+        .navbar-text {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .social-icon {
+            width: 100%;
+            margin-left: 0;
+            padding-left: 24px;
+        }
+
+        .btn {
+            margin: 24px;
+        }
+    }
+
+
+    #home {
+        padding-top: 120px;
+
+        h1 {
+            font-size: 42px;
+        }
+
+        button {
+            margin-top: 24px;
+        }
+    }
+
+    #skills {
+
+        .skill-bx {
+            padding: 60px 24px;
+        }
+
+        .skill-slider {
+            width: 100%;
+        }
+    }
+
+    #projects {
+        .nav-pills {
+            border: none;
+            width: 100%;
+            flex-wrap: wrap;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        .nav-item {
+            border: 1px solid rgba(255, 255, 255, 1);
+
+            background-color: #ffffff1a;
+            // border: none;
+
+            &:first-child {
+                border-radius: 0;
+            }
+
+            &:last-child {
+                border-radius: 0;
+            }
+        }
+
+        .nav-link {
+            border: none;
+        }
+    }
+
+    .newsletter-bx {
+        padding: 32px 24px;
+
+        .button {
+            padding: 12px 24px;
+        }
+    }
+}
