@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e118cef3.css",
+    "main.css": "/static/css/main.be1b22b8.css",
     "main.js": "/static/js/main.89fba770.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/couple_tx.png": "/static/media/couple_tx.3b3ca9cf61ad623bad00.png",
@@ -10,6 +10,7 @@
     "static/media/mini_player.png": "/static/media/mini_player.317e3f4a26f7fecacd9d.png",
     "static/media/my_cv.png": "/static/media/my_cv.c7b75f9087847e4dbdbe.png",
     "static/media/covid_tracker.png": "/static/media/covid_tracker.8a31b84b71067c771d96.png",
+    "static/media/banner-bg.png": "/static/media/banner-bg.cc1273af450504afe755.png",
     "static/media/header-img.svg": "/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
@@ -25,12 +26,12 @@
     "index.html": "/index.html",
     "static/media/zaloIcon.svg": "/static/media/zaloIcon.cd284c92662bb017d4380c79cbed32ca.svg",
     "static/media/facebookIcon.svg": "/static/media/facebookIcon.57d0b81a5ab9cc7adea7bd4689113c3a.svg",
-    "main.e118cef3.css.map": "/static/css/main.e118cef3.css.map",
+    "main.be1b22b8.css.map": "/static/css/main.be1b22b8.css.map",
     "main.89fba770.js.map": "/static/js/main.89fba770.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e118cef3.css",
+    "static/css/main.be1b22b8.css",
     "static/js/main.89fba770.js"
   ]
 }
