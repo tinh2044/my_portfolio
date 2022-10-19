@@ -24,7 +24,7 @@ function Newsletter({ status, message, onValidated }) {
     return (
         <Col lg={12}>
             <div className="newsletter-bx wow slideInUp">
-                <Row className="d-flex justify-content-center">
+                <Row className="d-flex justify-content-center ">
                     <Col xs={12} lg={5} className="d-flex justify-content-center align-items-center">
                         <h3 className="text-center">Subscribe to our Newsletter & Never miss latest updates</h3>
                         {status === 'sending' && <Alert>Sending...</Alert>}

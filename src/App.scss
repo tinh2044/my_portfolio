@@ -241,11 +241,14 @@ p.danger {
         }
     }
 
-    .newsletter-bx {
-        padding: 32px 24px;
+    .footer {
 
-        .button {
-            padding: 12px 24px;
+        .newsletter-bx {
+            padding: 32px 24px;
+
+            button {
+                padding: 12px 24px;
+            }
         }
     }
 }
