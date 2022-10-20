@@ -78,7 +78,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url(./assets/img/banner-bg.png) top center / cover no-repeat;
+    background: url(./assets/img/background/banner-bg.png) top center / cover no-repeat;
 }
 
 code {
@@ -121,10 +121,7 @@ p.danger {
 /************ Footer Css ************/
 .footer {
     padding: 0 0 50px 0;
-    background-image: url('./assets/img/footer-bg.png');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url(./assets/img/background/footer-bg.png) top center / cover no-repeat;
 }
 
 .footer img {
@@ -156,7 +153,7 @@ p.danger {
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
     #navbar {
         .navbar-collapse {

@@ -4,6 +4,7 @@ import imgCoupleTx from '../../assets/img/projects/couple_tx.png';
 import imgCovidTracker from '../../assets/img/projects/covid_tracker.png';
 import imgMyCv from '../../assets/img/projects/my_cv.png';
 import imgWeatherForecast from '../../assets/img/projects/weather_forecast.png';
+import imgMyPortfolio from '../../assets/img/projects/my_portfolio.png';
 import {
     AxiosIcon,
     CssIcon,
@@ -12,6 +13,7 @@ import {
     JqueryIcon,
     JSIcon,
     MaterialIcon,
+    ReactBootstrap,
     ReactIcon,
     ReactRouterDomIcon,
     ScssIcon,
@@ -91,7 +93,7 @@ const listProjects = [
         },
         desc: {
             name: 'My CV',
-            introduce: 'This is my information',
+            introduce: 'This is my CV',
             time: 'I has made it since from Sep 6th ',
             description: 'You can see my information at this project (name, address, my school, etc)',
             benefit: 'My Cv can help me show my information for everyone',
@@ -142,11 +144,6 @@ const listProjects = [
                     icon: <ReactRouterDomIcon />,
                     tooltip: 'React Router Dom',
                     link: 'https://reactjs.org/',
-                },
-                {
-                    icon: <ReactIcon />,
-                    tooltip: 'React Js',
-                    link: 'https://v5.reactrouter.com/web/guides/quick-start',
                 },
                 {
                     icon: <AxiosIcon />,
@@ -223,11 +220,38 @@ const listProjects = [
                     tooltip: 'HighCharts',
                     link: 'https://www.highcharts.com/',
                 },
-                // {
-                //     icon: <AxiosIcon />,
-                //     tooltip: 'Axios',
-                //     link: 'https://axios-http.com/vi/docs/intro',
-                // },
+                {
+                    icon: <AxiosIcon />,
+                    tooltip: 'Axios',
+                    link: 'https://axios-http.com/vi/docs/intro',
+                },
+            ],
+        },
+    },
+    {
+        index: 'seven',
+        img: {
+            title: 'MY PORTFOLIO',
+            link: 'https://jolly-tapioca-a1eda8.netlify.app/',
+            image: imgMyPortfolio,
+        },
+        desc: {
+            name: 'My Portfolio',
+            introduce: 'Project show skills and projects of mine',
+            time: 'I has made it since Oct 12th',
+            description: 'You can see a my skills (html, css, , javascript, etc)',
+            benefit: 'I can show to everyone skills and projects of mine',
+            technology: [
+                {
+                    icon: <ReactIcon />,
+                    tooltip: 'React Js',
+                    link: 'https://reactjs.org/',
+                },
+                {
+                    icon: <ReactBootstrap />,
+                    tooltip: 'React Bootstrap',
+                    link: 'https://react-bootstrap.github.io/',
+                },
             ],
         },
     },

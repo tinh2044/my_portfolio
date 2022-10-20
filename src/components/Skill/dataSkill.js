@@ -54,7 +54,7 @@ export const listSkillDetail = [
     },
     {
         icon: <TailwindIcon />,
-        desc: ['I know classes of Tailwind', 'I cam use grid and responsive by Tailwind'],
+        desc: ['I know classes of Tailwind', 'I can use grid and responsive by Tailwind'],
     },
     {
         icon: <MaterialIcon />,

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import MailchimpForm from './MailchimpForm';
-import headerImg from '../assets/img/header-img.svg';
+import headerImg from '../assets/img/header.svg';
 import facebookIcon from '../assets/img/brand//facebookIcon.svg';
 import githubIcon from '../assets/img/brand/githubIcon.svg';
 import zaloIcon from '../assets/img/brand/githubIcon.svg';

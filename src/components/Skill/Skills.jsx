@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp2 from '../../assets/img/color-sharp2.png';
+import colorSharp2 from '../../assets/img/background/color-sharp2.png';
 import './Skill.scss';
 import { listSkill, listSkillDetail } from './dataSkill';
 import SkillItem from './SkillItem';
@@ -12,7 +12,6 @@ import LeftButton from './Button/LeftButton';
 
 function Skills() {
     const [indexItemDetail, setIndexItemDetail] = useState(0);
-    console.log(indexItemDetail);
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.

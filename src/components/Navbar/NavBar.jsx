@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-import headerImg from '../../assets/img/header-img.svg';
+import headerImg from '../../assets/img/header.svg';
 import facebookIcon from '../../assets/img/brand/facebookIcon.svg';
 import githubIcon from '../../assets/img/brand/githubIcon.svg';
 import zaloIcon from '../../assets/img/brand/zaloIcon.svg';
@@ -60,7 +60,7 @@ function NavBar() {
         <Router>
             <Navbar expand="md" className={scrolled ? 'scrolled' : ''} id="navbar">
                 <div className="container">
-                    <Navbar.Brand href="/">
+                    <Navbar.Brand href="#home">
                         <img src={headerImg} alt="Logo" />
                     </Navbar.Brand>
                     <Navbar.Toggle ref={navToggleRef} aria-controls="basic-navbar-nav">

@@ -41,7 +41,7 @@ function ProjectCard({ data: { img, desc }, isLeft }) {
                                 Benefit : <span className="text-secondary my-1">{desc.benefit} </span>
                             </span>
                             <span className="text-white my-1 d-flex align-items-center">
-                                <span className="me-1">Technology :</span>
+                                <span className="me-2">Technology :</span>
                                 {/* Render List Technology */}
                                 {listTechnology.map((technology, index) => (
                                     <OverlayTrigger
@@ -52,8 +52,13 @@ function ProjectCard({ data: { img, desc }, isLeft }) {
                                         <a href={technology.link} style={{ display: 'block' }}>
                                             <div
                                                 key={index}
-                                                className="mx-1"
-                                                style={{ width: '36px', height: '36px', cursor: 'pointer' }}
+                                                className="mx-2"
+                                                style={{
+                                                    width: '36px',
+                                                    height: '36px',
+                                                    cursor: 'pointer',
+                                                    position: 'relative',
+                                                }}
                                             >
                                                 {technology.icon}
                                             </div>
