@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../../assets/img/contact.svg';
 import './Contact.scss';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { toast } from 'react-toastify';
 
 function Contact() {
     const formInitialDetails = {
@@ -24,35 +26,49 @@ function Contact() {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setButtonText('Sending...');
-        let response = await fetch('http://localhost:5000/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8',
-            },
-            body: JSON.stringify(formDetails),
-        });
-        setButtonText('Send');
-        let result = await response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-            setStatus({ success: true, message: 'Message sent successfully' });
-        } else {
-            setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-        }
-    };
+    const form = useRef();
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+        toast('Message is seeding!', {
+            className: 'toast-message',
+            autoClose: 2000,
+        });
+        setButtonText('Seeding');
+        const seedMess = async () => {
+            const result = await emailjs.sendForm(
+                'service_mqibvjh',
+                'template_kwy7mn6',
+                form.current,
+                'zhNlZsT82rOkMgUpd',
+            );
+
+            if (result.status === 200) {
+                toast.success('Send Message was success!', {
+                    className: 'toast-message',
+                    autoClose: 2000,
+                });
+                setButtonText('Seed');
+            } else {
+                toast.error('Has error please check your internet!', {
+                    className: 'toast-message',
+                    autoClose: 2000,
+                });
+                setButtonText('Seed');
+            }
+        };
+        setFormDetails(formInitialDetails);
+        seedMess();
+    };
     return (
-        <section className="contact" id="connect">
+        <section className="contact" id="contact">
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} xs={4} lg={5} className="d-none d-lg-block">
                         <TrackVisibility>
                             {({ isVisible }) => (
                                 <img
-                                    className={isVisible ? 'animate__animated animate__zoomIn' : ''}
+                                    className={isVisible ? 'animate__animated animate__bounceInLeft' : ''}
                                     src={contactImg}
                                     alt="Contact Us"
                                 />
@@ -62,12 +78,13 @@ function Contact() {
                     <Col size={12} xs={12} lg={7}>
                         <TrackVisibility>
                             {({ isVisible }) => (
-                                <div className={isVisible ? 'animate__animated animate__fadeIn' : ''}>
+                                <div className={isVisible ? 'animate__animated animate__bounceInRight' : ''}>
                                     <h2>Get In Touch</h2>
-                                    <form className="form" onSubmit={handleSubmit}>
+                                    <form ref={form} className="form" onSubmit={sendEmail}>
                                         <Row>
                                             <Col size={12} sm={6} className="px-1">
                                                 <input
+                                                    name="first-name"
                                                     type="text"
                                                     value={formDetails.firstName}
                                                     placeholder="First Name"
@@ -76,8 +93,9 @@ function Contact() {
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
                                                 <input
+                                                    name="last-name"
                                                     type="text"
-                                                    value={formDetails.lasttName}
+                                                    value={formDetails.lastName}
                                                     placeholder="Last Name"
                                                     onChange={(e) => onFormUpdate('lastName', e.target.value)}
                                                 />
@@ -85,6 +103,7 @@ function Contact() {
                                             <Col size={12} sm={6} className="px-1">
                                                 <input
                                                     type="email"
+                                                    name="email"
                                                     value={formDetails.email}
                                                     placeholder="Email Address"
                                                     onChange={(e) => onFormUpdate('email', e.target.value)}
@@ -93,6 +112,7 @@ function Contact() {
                                             <Col size={12} sm={6} className="px-1">
                                                 <input
                                                     type="tel"
+                                                    name="phone"
                                                     value={formDetails.phone}
                                                     placeholder="Phone No."
                                                     onChange={(e) => onFormUpdate('phone', e.target.value)}
@@ -101,6 +121,7 @@ function Contact() {
                                             <Col size={12} className="px-1">
                                                 <textarea
                                                     rows="6"
+                                                    name="message"
                                                     value={formDetails.message}
                                                     placeholder="Message"
                                                     onChange={(e) => onFormUpdate('message', e.target.value)}

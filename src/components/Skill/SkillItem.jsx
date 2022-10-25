@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col } from 'react-bootstrap';
 import './Skill.scss';
-function SkillItem({ icon, present, index, setIndexItemDetail }) {
+function SkillItem({ icon, present, index, setIndexItemDetail, setIsLeft }) {
     const [effect, setEffect] = useState(false);
     useEffect(() => {
         setTimeout(() => {
@@ -14,9 +14,17 @@ function SkillItem({ icon, present, index, setIndexItemDetail }) {
         }, index * 300);
         // return clearInterval(id);
     }, []);
+
+    const handleClick = () => {
+        setIndexItemDetail((prev) => {
+            setIsLeft(prev > index ? true : false);
+            console.log(prev > index);
+            return index;
+        });
+    };
     return (
         <Col xs={12} md={4} lg={4} className="wrapper">
-            <div className="main" onClick={() => setIndexItemDetail(index)}>
+            <div className="main" onClick={handleClick}>
                 <div className="body ">
                     <div className="inner">
                         <div className="content">

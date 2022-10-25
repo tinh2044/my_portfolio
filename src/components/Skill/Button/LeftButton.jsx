@@ -1,10 +1,12 @@
 import React from 'react';
 import { ChevronLeft } from 'react-bootstrap-icons';
 import './Style.scss';
-function LeftButton({ onClick, lenIcon, setIndexItemDetail, ...rest }) {
+function LeftButton({ onClick, lenIcon, setIndexItemDetail, setIsLeft, ...rest }) {
     const handleNext = () => {
         onClick();
         setIndexItemDetail((prev) => {
+            setIsLeft(true);
+
             if (prev > 0) return prev - 1;
             else return lenIcon - 1;
         });

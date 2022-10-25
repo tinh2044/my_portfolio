@@ -12,6 +12,8 @@ import LeftButton from './Button/LeftButton';
 
 function Skills() {
     const [indexItemDetail, setIndexItemDetail] = useState(0);
+    // Set Animation For Skill Detail Component
+    const [isLeft, setIsLeft] = useState(0);
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -49,12 +51,14 @@ function Skills() {
                                     <RightButton
                                         lenIcon={listSkillDetail.length}
                                         setIndexItemDetail={setIndexItemDetail}
+                                        setIsLeft={setIsLeft}
                                     />
                                 }
                                 customLeftArrow={
                                     <LeftButton
                                         lenIcon={listSkillDetail.length}
                                         setIndexItemDetail={setIndexItemDetail}
+                                        setIsLeft={setIsLeft}
                                     />
                                 }
                             >
@@ -65,16 +69,20 @@ function Skills() {
                                         present={skill.present}
                                         index={index}
                                         setIndexItemDetail={setIndexItemDetail}
+                                        setIsLeft={setIsLeft}
                                     />
                                 ))}
-                                {/* <SkillItem icon={listSkill[0].icon} present={listSkill[0].present} /> */}
                             </Carousel>
-                            <SkillDetail data={listSkillDetail[indexItemDetail]} />
+                            {listSkillDetail.map((data, index) => (
+                                <SkillDetail
+                                    isLeft={isLeft}
+                                    data={data}
+                                    key={index}
+                                    isShow={indexItemDetail === index}
+                                />
+                            ))}
                         </div>
                     </Col>
-                    {/* <Col xs={12}>
-                        <SkillDetail />
-                    </Col> */}
                 </Row>
             </div>
             <img className="background-image-right" src={colorSharp2} alt=""></img>

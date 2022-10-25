@@ -107,9 +107,9 @@ function NavBar() {
                                 ))}
                             </div>
 
-                            <HashLink to="#skills">
+                            <HashLink to="#contact">
                                 <button className="button">
-                                    <span>See Skills</span>
+                                    <span>Let Contact</span>
                                 </button>
                             </HashLink>
                         </span>

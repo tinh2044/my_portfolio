@@ -24,39 +24,32 @@ function Projects() {
             <Container>
                 <Row>
                     <Col size={12}>
-                        <TrackVisibility>
-                            {({ isVisible }) => (
-                                <div className="">
-                                    <h2>Projects</h2>
-                                    <p>I make some project after my courses at F8</p>
-                                    <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                                        <Nav
-                                            variant="pills"
-                                            className="nav-pills mb-5 justify-content-center align-items-center"
-                                            id="pills-tab"
-                                        >
-                                            {listProjects.map((project, index) => (
-                                                <Nav.Item key={project.index} onClick={() => handleTag(index)}>
-                                                    <Nav.Link eventKey={project.index}>{`Tab ${index + 1}`}</Nav.Link>
-                                                </Nav.Item>
-                                            ))}
-                                        </Nav>
-                                        <Tab.Content
-                                            id="slideInUp"
-                                            className={isVisible ? 'animate__animated animate__slideInUp' : ''}
-                                        >
-                                            {listProjects.map((project) => (
-                                                <Tab.Pane key={project.index} eventKey={project.index}>
-                                                    <Row>
-                                                        <ProjectCard isLeft={isLeft} data={project} />
-                                                    </Row>
-                                                </Tab.Pane>
-                                            ))}
-                                        </Tab.Content>
-                                    </Tab.Container>
-                                </div>
-                            )}
-                        </TrackVisibility>
+                        <div className="">
+                            <h2>Projects</h2>
+                            <p>I make some project after my courses at F8</p>
+                            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                                <Nav
+                                    variant="pills"
+                                    className="nav-pills mb-5 justify-content-center align-items-center"
+                                    id="pills-tab"
+                                >
+                                    {listProjects.map((project, index) => (
+                                        <Nav.Item key={project.index} onClick={() => handleTag(index)}>
+                                            <Nav.Link eventKey={project.index}>{`Tab ${index + 1}`}</Nav.Link>
+                                        </Nav.Item>
+                                    ))}
+                                </Nav>
+                                <Tab.Content id="slideInUp">
+                                    {listProjects.map((project) => (
+                                        <Tab.Pane key={project.index} eventKey={project.index}>
+                                            <Row>
+                                                <ProjectCard isLeft={isLeft} data={project} />
+                                            </Row>
+                                        </Tab.Pane>
+                                    ))}
+                                </Tab.Content>
+                            </Tab.Container>
+                        </div>
                     </Col>
                 </Row>
             </Container>
