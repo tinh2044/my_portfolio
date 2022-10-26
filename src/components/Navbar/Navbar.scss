@@ -1,5 +1,4 @@
 nav {
-
     &.navbar {
         padding: 24px 0;
         position: fixed;
@@ -17,12 +16,9 @@ nav {
         a.navbar-brand {
             width: 9%;
         }
-
-
     }
-   
-    .navbar-nav {
 
+    .navbar-nav {
         .nav-link.navbar-link {
             font-weight: 400;
             color: #fff !important;
@@ -67,7 +63,7 @@ nav {
         font-size: 18px;
         margin-left: 18px;
         position: relative;
-        background-color: transparent;
+        background: transparent;
         transition: 0.3s ease-in-out;
 
         span {
@@ -79,7 +75,7 @@ nav {
             width: 0%;
             height: 100%;
             position: absolute;
-            background-color: #fff;
+            background: #fff;
             left: 0;
             top: 0;
             z-index: -1;
@@ -116,7 +112,6 @@ nav {
         width: 240px;
     }
 
-
     a {
         width: 42px;
         height: 42px;
@@ -148,21 +143,17 @@ nav {
         }
 
         &:hover {
-
             &::before {
                 transform: scale(1);
-
             }
 
             img {
-                filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+                filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg)
+                    brightness(95%) contrast(86%);
             }
         }
-
     }
-
 }
-
 
 .navbar-text button:hover nav .navbar-toggler:active,
 nav .navbar-toggler:focus {
@@ -171,7 +162,6 @@ nav .navbar-toggler:focus {
 }
 
 nav {
-
     .navbar-toggler-icon {
         width: 24px;
         height: 17px;
@@ -196,7 +186,6 @@ nav {
 
         &::after {
             top: 8px;
-
         }
     }
 
