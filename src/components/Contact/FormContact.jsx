@@ -60,9 +60,9 @@ function FormContact() {
                             onChange={handleChange}
                         />
                         {!!touched.firstName && !!errors.firstName ? (
-                            <label data-invalid={errors.firstName}></label>
+                            <label className="alert-error" data-invalid={errors.firstName}></label>
                         ) : (
-                            <label data-valid="your first name is valid"></label>
+                            <label className="alert-success" data-valid="your first name is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -75,9 +75,9 @@ function FormContact() {
                             onChange={handleChange}
                         />
                         {touched.lastName && errors.lastName ? (
-                            <label data-invalid={errors.lastName}></label>
+                            <label className="alert-error" data-invalid={errors.lastName}></label>
                         ) : (
-                            <label data-valid="your last name is valid"></label>
+                            <label className="alert-success" data-valid="your last name is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -91,9 +91,9 @@ function FormContact() {
                             onChange={handleChange}
                         />
                         {touched.email && errors.email ? (
-                            <label data-invalid={errors.email}></label>
+                            <label className="alert-error" data-invalid={errors.email}></label>
                         ) : (
-                            <label data-valid="your email is valid"></label>
+                            <label className="alert-success" data-valid="your email is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -106,9 +106,9 @@ function FormContact() {
                             onChange={handleChange}
                         />
                         {touched.phone && errors.phone ? (
-                            <label data-invalid={errors.phone}></label>
+                            <label className="alert-error" data-invalid={errors.phone}></label>
                         ) : (
-                            <label data-valid="your phone is valid"></label>
+                            <label className="alert-success" data-valid="your phone is valid"></label>
                         )}
                     </Col>
                     <Col size={12} className="px-1">
@@ -121,9 +121,9 @@ function FormContact() {
                             onChange={handleChange}
                         ></textarea>
                         {touched.message && errors.message ? (
-                            <label data-invalid={errors.message}></label>
+                            <label className="alert-error" data-invalid={errors.message}></label>
                         ) : (
-                            <label data-valid=""></label>
+                            <label className="alert-success" data-valid=""></label>
                         )}
                         <button
                             type="submit"
