@@ -57,20 +57,32 @@
         display: inherit;
         height: 28px;
         margin-left: 12px;
-
-        overflow: hidden;
-
-        &::before {
-            content: attr(data-invalid);
-            color: #f44947;
-        }
-        &::after {
-            content: attr(data-valid);
-            color: #58b05e;
-        }
+        background: transparent;
+        // overflow: hidden;
     }
-    input:placeholder-shown ~ label::after {
-        content: '         ';
+    .alert-error::before {
+        content: attr(data-invalid);
+        color: #f44947;
+        animation: fadeInLeft 0.4s linear;
+    }
+    .alert-success::after {
+        content: attr(data-valid);
+        color: #58b05e;
+        animation: fadeInLeft 0.4s linear;
+    }
+    // input:placeholder-shown ~ label::after {
+    //     // content: '';
+    // }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
