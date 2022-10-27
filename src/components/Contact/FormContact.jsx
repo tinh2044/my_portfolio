@@ -62,7 +62,7 @@ function FormContact() {
                         {!!touched.firstName && !!errors.firstName ? (
                             <label className="alert-error" data-invalid={errors.firstName}></label>
                         ) : (
-                            <label className="alert-success" data-valid="your first name is valid"></label>
+                            <label className="alert-success" data-valid="Your first name is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -77,7 +77,7 @@ function FormContact() {
                         {touched.lastName && errors.lastName ? (
                             <label className="alert-error" data-invalid={errors.lastName}></label>
                         ) : (
-                            <label className="alert-success" data-valid="your last name is valid"></label>
+                            <label className="alert-success" data-valid="Your last name is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -93,7 +93,7 @@ function FormContact() {
                         {touched.email && errors.email ? (
                             <label className="alert-error" data-invalid={errors.email}></label>
                         ) : (
-                            <label className="alert-success" data-valid="your email is valid"></label>
+                            <label className="alert-success" data-valid="Your email is valid"></label>
                         )}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
@@ -108,7 +108,7 @@ function FormContact() {
                         {touched.phone && errors.phone ? (
                             <label className="alert-error" data-invalid={errors.phone}></label>
                         ) : (
-                            <label className="alert-success" data-valid="your phone is valid"></label>
+                            <label className="alert-success" data-valid="Your phone is valid"></label>
                         )}
                     </Col>
                     <Col size={12} className="px-1">
@@ -123,7 +123,7 @@ function FormContact() {
                         {touched.message && errors.message ? (
                             <label className="alert-error" data-invalid={errors.message}></label>
                         ) : (
-                            <label className="alert-success" data-valid=""></label>
+                            <label className="alert-success" data-valid="Message is valid"></label>
                         )}
                         <button
                             type="submit"
@@ -156,15 +156,15 @@ export default FormContact;
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const checkValue = yup.object().shape({
-    firstName: yup.string().required('please enter that field'),
-    lastName: yup.string().required('please enter that field'),
-    email: yup.string().email().required('please enter that field'),
+    firstName: yup.string().required('Please enter that field'),
+    lastName: yup.string().required('Please enter that field'),
+    email: yup.string().email().required('Please enter that field'),
     phone: yup
         .string()
         .max(10, 'Phone number is not valid')
         .matches(phoneRegExp, 'Phone number is not valid')
-        .required('please enter that field'),
-    message: yup.string().required('please enter your message'),
+        .required('Please enter that field'),
+    message: yup.string().required('Please enter your message'),
 });
 
 const initialValues = {
