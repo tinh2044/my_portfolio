@@ -5,6 +5,7 @@ import imgCovidTracker from '../../assets/img/projects/covid_tracker.png';
 import imgMyCv from '../../assets/img/projects/my_cv.png';
 import imgWeatherForecast from '../../assets/img/projects/weather_forecast.png';
 import imgMyPortfolio from '../../assets/img/projects/my_portfolio.png';
+import imgDashboard from '../../assets/img/projects/dashboard.png';
 import {
     AxiosIcon,
     CssIcon,
@@ -288,7 +289,7 @@ const listProjects = [
         img: {
             title: 'DASHBOARD',
             link: 'https://dancing-gnome-93a870.netlify.app',
-            image: imgMyPortfolio,
+            image: imgDashboard,
         },
         desc: {
             name: 'Dashboard',
