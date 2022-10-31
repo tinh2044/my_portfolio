@@ -313,3 +313,7 @@ export const ReactBootstrap = () => {
         </svg>
     );
 };
+
+export const NivoIcon = () => {
+    return <img alt="" src="./icon_nivo.png" width="100%" height="100%" />;
+};

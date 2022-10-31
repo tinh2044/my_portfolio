@@ -13,6 +13,7 @@ import {
     JqueryIcon,
     JSIcon,
     MaterialIcon,
+    NivoIcon,
     ReactBootstrap,
     ReactIcon,
     ReactRouterDomIcon,
@@ -251,6 +252,66 @@ const listProjects = [
                     icon: <ReactBootstrap />,
                     tooltip: 'React Bootstrap',
                     link: 'https://react-bootstrap.github.io/',
+                },
+            ],
+        },
+    },
+    {
+        index: 'seven',
+        img: {
+            title: 'MY PORTFOLIO',
+            link: 'https://jolly-tapioca-a1eda8.netlify.app/',
+            image: imgMyPortfolio,
+        },
+        desc: {
+            name: 'My Portfolio',
+            introduce: 'Project show skills and projects of mine',
+            time: 'I has made it since Oct 12th',
+            description: 'You can see a my skills (html, css, , javascript, etc)',
+            benefit: 'I can show to everyone skills and projects of mine',
+            technology: [
+                {
+                    icon: <ReactIcon />,
+                    tooltip: 'React Js',
+                    link: 'https://reactjs.org/',
+                },
+                {
+                    icon: <ReactBootstrap />,
+                    tooltip: 'React Bootstrap',
+                    link: 'https://react-bootstrap.github.io/',
+                },
+            ],
+        },
+    },
+    {
+        index: 'eight',
+        img: {
+            title: 'DASHBOARD',
+            link: 'https://dancing-gnome-93a870.netlify.app',
+            image: imgMyPortfolio,
+        },
+        desc: {
+            name: 'Dashboard',
+            introduce: 'Project is as a manage system',
+            time: 'I has made it since Oct 20th',
+            description: 'You can see charts, customer, team , etc',
+            benefit: 'I learn more about material ul, reactjs',
+            technology: [
+                {
+                    icon: <ReactIcon />,
+                    tooltip: 'React Js',
+                    link: 'https://reactjs.org/',
+                },
+                {
+                    icon: <MaterialIcon />,
+                    tooltip: 'Material UI',
+                    link: 'https://mui.com/material-ui/',
+                },
+
+                {
+                    icon: <NivoIcon />,
+                    tooltip: 'Nivo ',
+                    link: 'https://nivo.rocks/',
                 },
             ],
         },
