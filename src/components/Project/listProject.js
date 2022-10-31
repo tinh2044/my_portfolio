@@ -258,33 +258,6 @@ const listProjects = [
         },
     },
     {
-        index: 'seven',
-        img: {
-            title: 'MY PORTFOLIO',
-            link: 'https://jolly-tapioca-a1eda8.netlify.app/',
-            image: imgMyPortfolio,
-        },
-        desc: {
-            name: 'My Portfolio',
-            introduce: 'Project show skills and projects of mine',
-            time: 'I has made it since Oct 12th',
-            description: 'You can see a my skills (html, css, , javascript, etc)',
-            benefit: 'I can show to everyone skills and projects of mine',
-            technology: [
-                {
-                    icon: <ReactIcon />,
-                    tooltip: 'React Js',
-                    link: 'https://reactjs.org/',
-                },
-                {
-                    icon: <ReactBootstrap />,
-                    tooltip: 'React Bootstrap',
-                    link: 'https://react-bootstrap.github.io/',
-                },
-            ],
-        },
-    },
-    {
         index: 'eight',
         img: {
             title: 'DASHBOARD',

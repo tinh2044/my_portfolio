@@ -5,6 +5,7 @@ import TrackVisibility from 'react-on-screen';
 import { toast } from 'react-toastify';
 import { Col, Row } from 'react-bootstrap';
 import { Formik } from 'formik';
+import Label from './Label';
 function FormContact() {
     const [buttonText, setButtonText] = useState('Send');
     const form = useRef();
@@ -50,21 +51,28 @@ function FormContact() {
         return (
             <form ref={form} className="form" onSubmit={handleSubmit}>
                 <Row>
+                    {/* Field First Name */}
                     <Col size={12} sm={6} className="px-1">
                         <input
                             name="firstName"
                             type="text"
                             placeholder="First Name"
-                            value={values.name}
+                            value={values.firstName}
                             onBlur={handleBlur}
                             onChange={handleChange}
                         />
+                        {/* Handle Error */}
                         {!!touched.firstName && !!errors.firstName ? (
-                            <label className="alert-error" data-invalid={errors.firstName}></label>
+                            <Label text={errors.firstName} className="alert-error" error={true} />
                         ) : (
-                            <label className="alert-success" data-valid="Your first name is valid"></label>
+                            <Label
+                                text={values.firstName.length > 0 ? 'Your first name is valid' : ''}
+                                className="alert-success"
+                                error={false}
+                            />
                         )}
                     </Col>
+                    {/* Field Last Name */}
                     <Col size={12} sm={6} className="px-1">
                         <input
                             name="lastName"
@@ -74,12 +82,18 @@ function FormContact() {
                             onBlur={handleBlur}
                             onChange={handleChange}
                         />
-                        {touched.lastName && errors.lastName ? (
-                            <label className="alert-error" data-invalid={errors.lastName}></label>
+                        {/* Handle Error */}
+                        {!!touched.lastName && !!errors.lastName ? (
+                            <Label text={errors.lastName} className="alert-error" error={true} />
                         ) : (
-                            <label className="alert-success" data-valid="Your last name is valid"></label>
+                            <Label
+                                text={values.lastName.length > 0 ? 'Your last name is valid' : ''}
+                                className="alert-success"
+                                error={false}
+                            />
                         )}
                     </Col>
+                    {/* Field email */}
                     <Col size={12} sm={6} className="px-1">
                         <input
                             className="email"
@@ -90,12 +104,18 @@ function FormContact() {
                             onBlur={handleBlur}
                             onChange={handleChange}
                         />
-                        {touched.email && errors.email ? (
-                            <label className="alert-error" data-invalid={errors.email}></label>
+                        {/* Handle Error */}
+                        {!!touched.email && !!errors.email ? (
+                            <Label text={errors.email} className="alert-error" error={true} />
                         ) : (
-                            <label className="alert-success" data-valid="Your email is valid"></label>
+                            <Label
+                                text={values.email.length > 0 ? 'Your email is valid' : ''}
+                                className="alert-success"
+                                error={false}
+                            />
                         )}
                     </Col>
+                    {/* Field Phone */}
                     <Col size={12} sm={6} className="px-1">
                         <input
                             type="tel"
@@ -105,12 +125,18 @@ function FormContact() {
                             onBlur={handleBlur}
                             onChange={handleChange}
                         />
-                        {touched.phone && errors.phone ? (
-                            <label className="alert-error" data-invalid={errors.phone}></label>
+                        {/* Handle Error */}
+                        {!!touched.phone && !!errors.phone ? (
+                            <Label text={errors.phone} className="alert-error" error={true} />
                         ) : (
-                            <label className="alert-success" data-valid="Your phone is valid"></label>
+                            <Label
+                                text={values.phone.length > 0 ? 'Your phone is valid' : ''}
+                                className="alert-success"
+                                error={false}
+                            />
                         )}
                     </Col>
+                    {/* Field Text */}
                     <Col size={12} className="px-1">
                         <textarea
                             rows="6"
@@ -120,10 +146,15 @@ function FormContact() {
                             onBlur={handleBlur}
                             onChange={handleChange}
                         ></textarea>
-                        {touched.message && errors.message ? (
-                            <label className="alert-error" data-invalid={errors.message}></label>
+                        {/* Handle Error */}
+                        {!!touched.message && !!errors.message ? (
+                            <Label text={errors.message} className="alert-error" error={true} />
                         ) : (
-                            <label className="alert-success" data-valid="Message is valid"></label>
+                            <Label
+                                text={values.message.length > 0 ? 'Your message is valid' : ''}
+                                className="alert-success"
+                                error={false}
+                            />
                         )}
                         <button
                             type="submit"
@@ -156,15 +187,15 @@ export default FormContact;
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const checkValue = yup.object().shape({
-    firstName: yup.string().required('Please enter that field'),
-    lastName: yup.string().required('Please enter that field'),
-    email: yup.string().email().required('Please enter that field'),
+    firstName: yup.string().required('Please enter your first name'),
+    lastName: yup.string().required('Please enter your last name'),
+    email: yup.string().email().required('You had forgotten your email'),
     phone: yup
         .string()
-        .max(10, 'Phone number is not valid')
+        .max(10, 'Phone number has 10 number')
         .matches(phoneRegExp, 'Phone number is not valid')
-        .required('Please enter that field'),
-    message: yup.string().required('Please enter your message'),
+        .required('You had forgotten your phone'),
+    message: yup.string().required('Please give me some things'),
 });
 
 const initialValues = {
