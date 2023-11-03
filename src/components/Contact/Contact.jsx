@@ -1,4 +1,3 @@
-import { useMemo, useRef, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../../assets/img/contact.svg';
 import './Contact.scss';
