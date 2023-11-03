@@ -196,7 +196,7 @@ const listProjects = [
         index: 'six',
         img: {
             title: 'WEATHER FORECAST',
-            link: 'https://whimsical-croquembouche-be7a2f.netlify.app/',
+            link: 'https://sparkling-liger-47dc68.netlify.app/',
             image: imgWeatherForecast,
         },
         desc: {

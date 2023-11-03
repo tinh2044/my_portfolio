@@ -73,17 +73,15 @@ ul {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: url(./assets/img/background/banner-bg.png) top center / cover no-repeat;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 a:hover {
@@ -117,7 +115,7 @@ p.danger {
 .App {
     overflow: hidden;
 
-    // Customize Toast 
+    // Customize Toast
     .toast-message {
         background: linear-gradient(to right, #aa367c -5.91%, #4a2fbd 111.58%);
         color: white;
@@ -126,40 +124,12 @@ p.danger {
         align-items: center;
     }
     .Toastify__progress-bar {
-        background-color: #FF3CAC;
-        background-image: linear-gradient(55deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-        
-    } 
+        background-color: #ff3cac;
+        background-image: linear-gradient(55deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+    }
 }
-
 
 /************ Footer Css ************/
-.footer {
-    padding: 0 0 50px 0;
-    background: url(./assets/img/background/footer-bg.png) top center / cover no-repeat;
-}
-
-.footer img {
-    width: 26%;
-}
-
-.footer p {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 14px;
-    color: #b8b8b8;
-    letter-spacing: 0.5px;
-    margin-top: 20px;
-}
-
-.footer a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    color: #b8b8b8;
-    letter-spacing: 0.5px;
-    margin-top: 20px;
-}
 
 @media (min-width: 1700px) {
     main .container {
@@ -169,11 +139,9 @@ p.danger {
 }
 
 @media (max-width: 1023px) {
-
     #navbar {
         .navbar-collapse {
             background-color: #121212;
-
         }
 
         .navbar-brand {
@@ -191,13 +159,8 @@ p.danger {
 
         .social-icon {
             display: none;
-
         }
-
-
-        
     }
-
 
     #home {
         padding-top: 120px;
@@ -212,7 +175,6 @@ p.danger {
     }
 
     #skills {
-
         .skill-bx {
             padding: 60px 24px;
         }
@@ -252,7 +214,6 @@ p.danger {
     }
 
     .footer {
-
         .newsletter-bx {
             padding: 32px 24px;
 
@@ -262,10 +223,8 @@ p.danger {
         }
     }
 }
-@media (max-width: 768px) { 
-
+@media (max-width: 768px) {
     #navbar {
-
         .social-icon {
             display: flex;
             width: 100%;

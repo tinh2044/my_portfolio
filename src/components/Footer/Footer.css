@@ -1,0 +1,26 @@
+.footer {
+  padding: 32px 0;
+  background: url(../../assets/img/background/footer-bg.png) top center/cover no-repeat;
+}
+
+.footer img {
+  width: 26%;
+}
+
+.footer p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b8b8b8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.footer a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b8b8b8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
